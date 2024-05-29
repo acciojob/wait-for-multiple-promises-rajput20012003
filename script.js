@@ -1,4 +1,3 @@
-//your JS code here. If required.
 document.addEventListener("DOMContentLoaded", function () {
   const output = document.getElementById("output");
 
@@ -9,10 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to create a Promise that resolves after a random time
   function createPromise(id) {
+    const time = randomTime();
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve({ id: id, time: randomTime() / 1000 });
-      }, randomTime());
+        resolve({ id: id, time: time / 1000 });
+      }, time);
     });
   }
 
@@ -60,4 +60,3 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error occurred:", error);
     });
 });
-
